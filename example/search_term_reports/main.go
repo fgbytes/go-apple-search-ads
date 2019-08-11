@@ -6,11 +6,13 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"time"
 
 	"github.com/fgbytes/go-apple-search-ads/searchads"
 )
 
 func main() {
+	start := time.Now()
 	cID := int64(262773151)
 	// aID := int64(262825521)
 	pemdat, _ := ioutil.ReadFile("../cert.pem")
@@ -55,4 +57,7 @@ func main() {
 	fmt.Println(rs.Pagination.ItemsPerPage)
 	fmt.Println(rs.Pagination.StartIndex)
 	fmt.Println(rs.Pagination.TotalResults)
+	duration := time.Since(start)
+	fmt.Println("duration")
+	fmt.Println(duration)
 }
