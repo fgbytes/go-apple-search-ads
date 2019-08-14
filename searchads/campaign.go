@@ -67,7 +67,7 @@ func (s *CampaignService) List(ctx context.Context, opt *ListOptions) ([]*Campai
 }
 
 // Get function to get specific campaign by id
-func (s *CampaignService) Get(ctx context.Context, id int) (*Campaign, *Response, error) {
+func (s *CampaignService) Get(ctx context.Context, id int64) (*Campaign, *Response, error) {
 	u := fmt.Sprintf("campaigns/%d", id)
 	req, err := s.client.NewRequest("GET", u, nil)
 	if err != nil {
