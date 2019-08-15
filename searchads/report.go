@@ -246,7 +246,7 @@ type ReportFilter struct {
 	StartTime                  string      `json:"startTime"`
 	EndTime                    string      `json:"endTime"`
 	TimeZone                   TimeZone    `json:"timeZone"`
-	Granularity                Granularity `json:"granularity"`
+	Granularity                Granularity `json:"granularity,omitempty"`
 	Selector                   Selector    `json:"selector"`
 	GroupBy                    []GroupBy   `json:"groupBy"`
 	ReturnRowTotals            bool        `json:"returnRowTotals"`
