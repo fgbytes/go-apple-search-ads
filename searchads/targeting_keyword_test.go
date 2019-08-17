@@ -46,11 +46,11 @@ func TestAdGroupTargetingKeywordService_CreateBulk(t *testing.T) {
 		},
 	}
 
-	input := []*TargetingKeyword{&nk}
+	input := []TargetingKeyword{nk}
 
 	wantAcceptHeaders := []string{"application/json"}
 	mux.HandleFunc("/campaigns/1234/adgroups/1234/targetingkeywords/bulk", func(w http.ResponseWriter, r *http.Request) {
-		v := []*TargetingKeyword{}
+		v := []TargetingKeyword{}
 		json.NewDecoder(r.Body).Decode(&v)
 		testMethod(t, r, "POST")
 		testHeader(t, r, "Accept", strings.Join(wantAcceptHeaders, ", "))
@@ -65,8 +65,8 @@ func TestAdGroupTargetingKeywordService_CreateBulk(t *testing.T) {
 	if err != nil {
 		t.Errorf("AdGroupTargetingKeyword.CreateBulk returned error: %v", err)
 	}
-	want := []*TargetingKeyword{
-		&TargetingKeyword{
+	want := []TargetingKeyword{
+		TargetingKeyword{
 			ID:        1,
 			AdGroupID: 1234,
 			Text:      "i do negative keywords",
