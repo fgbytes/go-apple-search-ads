@@ -22,8 +22,8 @@ func main() {
 	}
 	status, _ := searchads.ParseKeywordStatus("ACTIVE")
 	matchType, _ := searchads.ParseMatchType("EXACT")
-	input := []*searchads.TargetingKeyword{
-		&searchads.TargetingKeyword{
+	input := []searchads.TargetingKeyword{
+		searchads.TargetingKeyword{
 			AdGroupID: adGroupID,
 			Text:      "withings health mate",
 			Status:    status,

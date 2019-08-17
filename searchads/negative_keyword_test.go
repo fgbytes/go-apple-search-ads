@@ -43,11 +43,11 @@ func TestCampaignNegativeKeywordService_CreateBulk(t *testing.T) {
 		Status:     KEYWORD_ACTIVE,
 	}
 
-	input := []*NegativeKeyword{&nk}
+	input := []NegativeKeyword{nk}
 
 	wantAcceptHeaders := []string{"application/json"}
 	mux.HandleFunc("/campaigns/1234/negativekeywords/bulk", func(w http.ResponseWriter, r *http.Request) {
-		v := []*NegativeKeyword{}
+		v := []NegativeKeyword{}
 		json.NewDecoder(r.Body).Decode(&v)
 		testMethod(t, r, "POST")
 		testHeader(t, r, "Accept", strings.Join(wantAcceptHeaders, ", "))
@@ -62,8 +62,8 @@ func TestCampaignNegativeKeywordService_CreateBulk(t *testing.T) {
 	if err != nil {
 		t.Errorf("CampaignNegativeKeyword.CreateBulk returned error: %v", err)
 	}
-	want := []*NegativeKeyword{
-		&NegativeKeyword{
+	want := []NegativeKeyword{
+		NegativeKeyword{
 			ID:               1,
 			CampaignID:       1234,
 			Text:             "i do negative keywords",
@@ -113,11 +113,11 @@ func TestAdGroupNegativeKeywordService_CreateBulk(t *testing.T) {
 		Status:     KEYWORD_ACTIVE,
 	}
 
-	input := []*NegativeKeyword{&nk}
+	input := []NegativeKeyword{nk}
 
 	wantAcceptHeaders := []string{"application/json"}
 	mux.HandleFunc("/campaigns/1234/adgroups/1234/negativekeywords/bulk", func(w http.ResponseWriter, r *http.Request) {
-		v := []*NegativeKeyword{}
+		v := []NegativeKeyword{}
 		json.NewDecoder(r.Body).Decode(&v)
 		testMethod(t, r, "POST")
 		testHeader(t, r, "Accept", strings.Join(wantAcceptHeaders, ", "))
@@ -132,8 +132,8 @@ func TestAdGroupNegativeKeywordService_CreateBulk(t *testing.T) {
 	if err != nil {
 		t.Errorf("AdGroupNegativeKeyword.CreateBulk returned error: %v", err)
 	}
-	want := []*NegativeKeyword{
-		&NegativeKeyword{
+	want := []NegativeKeyword{
+		NegativeKeyword{
 			ID:               1,
 			CampaignID:       1234,
 			AdGroupID:        1234,
