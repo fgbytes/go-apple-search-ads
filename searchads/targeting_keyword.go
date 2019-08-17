@@ -6,14 +6,14 @@ import (
 )
 
 type TargetingKeyword struct {
-	ID               int64          `json:"id,omitempty"`
-	AdGroupID        int64          `json:"adGroupId,omitempty"`
-	Text             string         `json:"text,omitempty"`
-	Status           KeywordStatus  `json:"status"`
-	MatchType        MatchType      `json:"matchType"`
-	BidAmount        Amount         `json:"bidAmount"`
-	ModificationTime string         `json:"modificationTime,omitempty"`
-	Deleted          bool           `json:"deleted,omitempty"`
+	ID               int64         `json:"id,omitempty"`
+	AdGroupID        int64         `json:"adGroupId,omitempty"`
+	Text             string        `json:"text,omitempty"`
+	Status           KeywordStatus `json:"status"`
+	MatchType        MatchType     `json:"matchType"`
+	BidAmount        Amount        `json:"bidAmount"`
+	ModificationTime string        `json:"modificationTime,omitempty"`
+	Deleted          bool          `json:"deleted,omitempty"`
 }
 
 // AdGroupTargetingKeywordService to handle Targeting Keywords of
@@ -71,27 +71,26 @@ func (s *AdGroupTargetingKeywordService) Get(ctx context.Context, campaignID, ad
 }
 
 // CreateBulk will create multiple Targeting Keywords for a campaign
-func (s *AdGroupTargetingKeywordService) CreateBulk(ctx context.Context, campaignID, adGroupID int64, data []*TargetingKeyword) ([]*TargetingKeyword, *Response, error) {
+func (s *AdGroupTargetingKeywordService) CreateBulk(ctx context.Context, campaignID, adGroupID int64, data []TargetingKeyword) ([]TargetingKeyword, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
 	if adGroupID == 0 {
 		return nil, nil, fmt.Errorf("adGroupID can not be 0")
 	}
-	fmt.Println(data)
 	u := fmt.Sprintf("campaigns/%d/adgroups/%d/targetingkeywords/bulk", campaignID, adGroupID)
 	req, err := s.client.NewRequest("POST", u, data)
 	if err != nil {
 		return nil, nil, err
 	}
 
-	targetingkeywords := []*TargetingKeyword{}
-	resp, err := s.client.Do(ctx, req, &targetingkeywords)
+	ks := []TargetingKeyword{}
+	resp, err := s.client.Do(ctx, req, &ks)
 	if err != nil {
 		return nil, resp, err
 	}
 
-	return targetingkeywords, resp, nil
+	return ks, resp, nil
 }
 
 // UpdateBulk will update an existing Targeting on a Adgroup
