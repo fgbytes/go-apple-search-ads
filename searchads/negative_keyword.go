@@ -43,7 +43,7 @@ func (s *CampaignNegativeKeywordService) List(ctx context.Context, campaignID in
 }
 
 // CreateBulk will create multiple Negative Keywords for a campaign
-func (s *CampaignNegativeKeywordService) CreateBulk(ctx context.Context, campaignID int64, data []*NegativeKeyword) ([]*NegativeKeyword, *Response, error) {
+func (s *CampaignNegativeKeywordService) CreateBulk(ctx context.Context, campaignID int64, data []NegativeKeyword) ([]NegativeKeyword, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
@@ -52,12 +52,12 @@ func (s *CampaignNegativeKeywordService) CreateBulk(ctx context.Context, campaig
 	if err != nil {
 		return nil, nil, err
 	}
-	negativekeywords := []*NegativeKeyword{}
-	resp, err := s.client.Do(ctx, req, &negativekeywords)
+	ks := []NegativeKeyword{}
+	resp, err := s.client.Do(ctx, req, &ks)
 	if err != nil {
 		return nil, resp, err
 	}
-	return negativekeywords, resp, nil
+	return ks, resp, nil
 }
 
 // UpdateBulk will create multiple Negative Keywords for a campaign
@@ -107,7 +107,7 @@ func (s *AdGroupNegativeKeywordService) List(ctx context.Context, campaignID int
 }
 
 // CreateBulk will create multiple Negative Keywords for a campaign
-func (s *AdGroupNegativeKeywordService) CreateBulk(ctx context.Context, campaignID int64, adGroupID int64, data []*NegativeKeyword) ([]*NegativeKeyword, *Response, error) {
+func (s *AdGroupNegativeKeywordService) CreateBulk(ctx context.Context, campaignID int64, adGroupID int64, data []NegativeKeyword) ([]NegativeKeyword, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
@@ -119,13 +119,13 @@ func (s *AdGroupNegativeKeywordService) CreateBulk(ctx context.Context, campaign
 	if err != nil {
 		return nil, nil, err
 	}
-	negativekeywords := []*NegativeKeyword{}
-	resp, err := s.client.Do(ctx, req, &negativekeywords)
+	ks := []NegativeKeyword{}
+	resp, err := s.client.Do(ctx, req, &ks)
 	if err != nil {
 		return nil, resp, err
 	}
 
-	return negativekeywords, resp, nil
+	return ks, resp, nil
 }
 
 // UpdateBulk will create multiple Negative Keywords for a campaign
