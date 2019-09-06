@@ -12,17 +12,20 @@ type DisplayStatus byte
 const (
 	DS_RUNNING DisplayStatus = iota
 	DS_PAUSED
+	DS_ON_HOLD
 )
 
 var (
 	_DisplayStatusNameToValue = map[string]DisplayStatus{
 		"RUNNING": DS_RUNNING,
 		"PAUSED":  DS_PAUSED,
+		"ON_HOLD": DS_ON_HOLD,
 	}
 
 	_DisplayStatusValueToName = map[DisplayStatus]string{
 		DS_RUNNING: "RUNNING",
 		DS_PAUSED:  "PAUSED",
+		DS_ON_HOLD: "ON_HOLD",
 	}
 )
 
