@@ -31,7 +31,7 @@ type CampaignMetadata struct {
 	CampaignStatus                     Status            `json:"campaignStatus"`
 	App                                App               `json:"app"`
 	ServingStatus                      ServingStatus     `json:"servingStatus"`
-	ServingStateReasons                *string           `json:"servingStateReasons"`
+	ServingStateReasons                []string          `json:"servingStateReasons"`
 	CountriesOrRegions                 []CountryCode     `json:"countriesOrRegions"`
 	ModificationTime                   string            `json:"modificationTime"`
 	TotalBudget                        Amount            `json:"totalBudget"`
