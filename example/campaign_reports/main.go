@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -20,23 +19,17 @@ func main() {
 		panic(err)
 	}
 	filter := searchads.ReportFilter{
-		StartTime:   "2019-04-01",
-		EndTime:     "2019-04-05",
-		Granularity: searchads.HOURLY,
+		StartTime:   "2019-09-06",
+		EndTime:     "2019-09-06",
+		Granularity: searchads.DAILY,
 		Selector: searchads.Selector{
 			OrderBy: []searchads.OrderBySelector{
 				searchads.OrderBySelector{
-					Field:     searchads.OrderByCountryOrRegion,
-					SortOrder: searchads.ASCENDING,
+					Field:     searchads.OrderByImpressions,
+					SortOrder: searchads.DESCENDING,
 				},
 			},
-			Conditions: []searchads.Condition{
-				searchads.Condition{
-					Field:    "countriesOrRegions",
-					Operator: searchads.OperatorContainsAny,
-					Values:   []string{"US", "GB"},
-				},
-			},
+			Conditions: []searchads.Condition{},
 			Pagination: searchads.PaginationSelector{
 				Offset: 0,
 				Limit:  1000,
@@ -45,7 +38,7 @@ func main() {
 		GroupBy: []searchads.GroupBy{
 			searchads.GroupByCountryOrRegion,
 		},
-		TimeZone:                   searchads.UTC,
+		TimeZone:                   searchads.ORTZ,
 		ReturnRecordsWithNoMetrics: true,
 		ReturnRowTotals:            true,
 		ReturnGrandTotals:          true,
@@ -55,11 +48,21 @@ func main() {
 		log.Fatalf("Campaign Reports error: %s", err)
 		panic(err)
 	}
-	res, _ := json.Marshal(&report)
-	fmt.Println(string(res))
 	fmt.Println("----------------")
-	fmt.Println(report.ReportingDataResponse.Row)
+
+	log.Printf("%20.20s\tStatus\tImpr\tTap\tInst\tTTR\t\tCPA\tCPT\tCost\tCR", "campaign name")
+
+	for _, row := range report.ReportingDataResponse.Row {
+		if row.Total.Impressions != 0 {
+			log.Println(row)
+		}
+
+	}
+	fmt.Println("----------------")
+	fmt.Println(report.ReportingDataResponse.GrandTotals.Total.LocalSpend.Amount, " ", report.ReportingDataResponse.GrandTotals.Total.Installs, " ", report.ReportingDataResponse.GrandTotals.Total.AvgCPA.Amount)
+	fmt.Println("----------------")
 	fmt.Println(rs.Pagination.ItemsPerPage)
 	fmt.Println(rs.Pagination.StartIndex)
 	fmt.Println(rs.Pagination.TotalResults)
+
 }
