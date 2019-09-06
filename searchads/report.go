@@ -24,6 +24,12 @@ type CampaignReportRow struct {
 	Granularity []Statistics     `json:"granularity,omitemtpy"`
 	Total       Statistics       `json:"total"`
 }
+
+func (c CampaignReportRow) String() string {
+	st, _ := c.Metadata.CampaignStatus.String()
+	return fmt.Sprintf("%20.20s\t%s\t%s", c.Metadata.CampaignName, st, c.Total.String())
+}
+
 type CampaignMetadata struct {
 	CampaignID                         int64             `json:"campaignId"`
 	CampaignName                       string            `json:"campaignName"`
@@ -44,6 +50,7 @@ type CampaignMetadata struct {
 
 // Campaigns to get reports from all campaigns with filter
 func (s *ReportService) Campaigns(ctx context.Context, filter *ReportFilter) (*CampaignReport, *Response, error) {
+
 	u := fmt.Sprintf("reports/campaigns")
 	req, err := s.client.NewRequest("POST", u, filter)
 	if err != nil {
@@ -226,6 +233,10 @@ type Statistics struct {
 	Date           string  `json:"date,omitemtpy"`
 }
 
+func (s Statistics) String() string {
+	return fmt.Sprintf("%d\t%d\t%d\t%4f\t%s\t%s\t%s\t%2.1f", s.Impressions, s.Taps, s.Installs, s.TTR, s.AvgCPA.Amount, s.AvgCPT.Amount, s.LocalSpend.Amount, s.ConversionRate*100)
+}
+
 type App struct {
 	AppName string `json:"appName"`
 	AdamID  int64  `json:"adamId"`
@@ -259,6 +270,8 @@ type OrderBySelector struct {
 	Field     OrderBy   `json:"field"`
 	SortOrder SortOrder `json:"sortOrder"`
 }
+
+
 
 type Condition struct {
 	Field    string   `json:"field"`
