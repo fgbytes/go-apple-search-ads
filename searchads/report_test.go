@@ -3,6 +3,7 @@ package searchads
 import (
 	"context"
 	"encoding/json"
+	"log"
 	"net/http"
 	"reflect"
 	"strings"
@@ -56,6 +57,7 @@ func TestReportService_Campaigns(t *testing.T) {
 	})
 
 	got, _, err := client.Report.Campaigns(context.Background(), filter)
+	log.Println(got)
 
 	if err != nil {
 		t.Errorf("Report.Campaigns returned error: %v", err)

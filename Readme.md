@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/jonagold-lab/go-apple-search-ads.svg?style=svg)](https://circleci.com/gh/jonagold-lab/go-apple-search-ads)
+[![CircleCI](https://circleci.com/gh/fgbytes/go-apple-search-ads.svg?style=svg)](https://circleci.com/gh/fgbytes/go-apple-search-ads)
 
 ### Examples
 

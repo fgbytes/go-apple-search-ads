@@ -13,9 +13,18 @@
             "latOnInstalls": 0,
             "latOffInstalls": 0,
             "ttr": 0.0,
-            "avgCPA": { "amount": "0", "currency": "EUR" },
-            "avgCPT": { "amount": "0", "currency": "EUR" },
-            "localSpend": { "amount": "0", "currency": "EUR" },
+            "avgCPA": {
+              "amount": "0",
+              "currency": "EUR"
+            },
+            "avgCPT": {
+              "amount": "0",
+              "currency": "EUR"
+            },
+            "localSpend": {
+              "amount": "0",
+              "currency": "EUR"
+            },
             "conversionRate": 0.0
           },
           "metadata": {
@@ -29,10 +38,18 @@
             },
             "servingStatus": "RUNNING",
             "servingStateReasons": null,
-            "countriesOrRegions": ["US"],
+            "countriesOrRegions": [
+              "US"
+            ],
             "modificationTime": "2019-03-20T23:58:51.455",
-            "totalBudget": { "amount": "50000", "currency": "EUR" },
-            "dailyBudget": { "amount": "500", "currency": "EUR" },
+            "totalBudget": {
+              "amount": "50000",
+              "currency": "EUR"
+            },
+            "dailyBudget": {
+              "amount": "500",
+              "currency": "EUR"
+            },
             "displayStatus": "RUNNING",
             "orgId": 378940,
             "countryOrRegionServingStateReasons": {},
@@ -50,9 +67,18 @@
             "latOnInstalls": 0,
             "latOffInstalls": 2,
             "ttr": 0.0619,
-            "avgCPA": { "amount": "2.1643", "currency": "EUR" },
-            "avgCPT": { "amount": "0.7214", "currency": "EUR" },
-            "localSpend": { "amount": "4.3285", "currency": "EUR" },
+            "avgCPA": {
+              "amount": "2.1643",
+              "currency": "EUR"
+            },
+            "avgCPT": {
+              "amount": "0.7214",
+              "currency": "EUR"
+            },
+            "localSpend": {
+              "amount": "4.3285",
+              "currency": "EUR"
+            },
             "conversionRate": 0.3333
           },
           "metadata": {
@@ -66,10 +92,18 @@
             },
             "servingStatus": "RUNNING",
             "servingStateReasons": null,
-            "countriesOrRegions": ["US"],
+            "countriesOrRegions": [
+              "US"
+            ],
             "modificationTime": "2019-03-29T23:01:38.586",
-            "totalBudget": { "amount": "50000", "currency": "EUR" },
-            "dailyBudget": { "amount": "100", "currency": "EUR" },
+            "totalBudget": {
+              "amount": "50000",
+              "currency": "EUR"
+            },
+            "dailyBudget": {
+              "amount": "100",
+              "currency": "EUR"
+            },
             "displayStatus": "RUNNING",
             "orgId": 378940,
             "countryOrRegionServingStateReasons": {},
@@ -87,9 +121,18 @@
             "latOnInstalls": 0,
             "latOffInstalls": 1,
             "ttr": 0.0192,
-            "avgCPA": { "amount": "3.2419", "currency": "EUR" },
-            "avgCPT": { "amount": "1.0806", "currency": "EUR" },
-            "localSpend": { "amount": "3.2419", "currency": "EUR" },
+            "avgCPA": {
+              "amount": "3.2419",
+              "currency": "EUR"
+            },
+            "avgCPT": {
+              "amount": "1.0806",
+              "currency": "EUR"
+            },
+            "localSpend": {
+              "amount": "3.2419",
+              "currency": "EUR"
+            },
             "conversionRate": 0.3333
           },
           "metadata": {
@@ -103,10 +146,18 @@
             },
             "servingStatus": "RUNNING",
             "servingStateReasons": null,
-            "countriesOrRegions": ["US"],
+            "countriesOrRegions": [
+              "US"
+            ],
             "modificationTime": "2019-03-20T23:58:59.227",
-            "totalBudget": { "amount": "100000", "currency": "EUR" },
-            "dailyBudget": { "amount": "500", "currency": "EUR" },
+            "totalBudget": {
+              "amount": "100000",
+              "currency": "EUR"
+            },
+            "dailyBudget": {
+              "amount": "500",
+              "currency": "EUR"
+            },
             "displayStatus": "RUNNING",
             "orgId": 378940,
             "countryOrRegionServingStateReasons": {},
@@ -124,9 +175,18 @@
             "latOnInstalls": 0,
             "latOffInstalls": 1,
             "ttr": 0.0,
-            "avgCPA": { "amount": "0", "currency": "EUR" },
-            "avgCPT": { "amount": "0", "currency": "EUR" },
-            "localSpend": { "amount": "0", "currency": "EUR" },
+            "avgCPA": {
+              "amount": "0",
+              "currency": "EUR"
+            },
+            "avgCPT": {
+              "amount": "0",
+              "currency": "EUR"
+            },
+            "localSpend": {
+              "amount": "0",
+              "currency": "EUR"
+            },
             "conversionRate": 0.0
           },
           "metadata": {
@@ -140,10 +200,18 @@
             },
             "servingStatus": "RUNNING",
             "servingStateReasons": null,
-            "countriesOrRegions": ["US"],
+            "countriesOrRegions": [
+              "US"
+            ],
             "modificationTime": "2019-03-20T23:58:36.735",
-            "totalBudget": { "amount": "50000", "currency": "EUR" },
-            "dailyBudget": { "amount": "500", "currency": "EUR" },
+            "totalBudget": {
+              "amount": "50000",
+              "currency": "EUR"
+            },
+            "dailyBudget": {
+              "amount": "500",
+              "currency": "EUR"
+            },
             "displayStatus": "RUNNING",
             "orgId": 378940,
             "countryOrRegionServingStateReasons": {},
@@ -161,9 +229,18 @@
             "latOnInstalls": 0,
             "latOffInstalls": 0,
             "ttr": 0.0,
-            "avgCPA": { "amount": "0", "currency": "EUR" },
-            "avgCPT": { "amount": "0", "currency": "EUR" },
-            "localSpend": { "amount": "0", "currency": "EUR" },
+            "avgCPA": {
+              "amount": "0",
+              "currency": "EUR"
+            },
+            "avgCPT": {
+              "amount": "0",
+              "currency": "EUR"
+            },
+            "localSpend": {
+              "amount": "0",
+              "currency": "EUR"
+            },
             "conversionRate": 0.0
           },
           "metadata": {
@@ -177,10 +254,18 @@
             },
             "servingStatus": "RUNNING",
             "servingStateReasons": null,
-            "countriesOrRegions": ["GB"],
+            "countriesOrRegions": [
+              "GB"
+            ],
             "modificationTime": "2019-03-16T17:19:22.182",
-            "totalBudget": { "amount": "5000", "currency": "EUR" },
-            "dailyBudget": { "amount": "100", "currency": "EUR" },
+            "totalBudget": {
+              "amount": "5000",
+              "currency": "EUR"
+            },
+            "dailyBudget": {
+              "amount": "100",
+              "currency": "EUR"
+            },
             "displayStatus": "RUNNING",
             "orgId": 378940,
             "countryOrRegionServingStateReasons": {},
@@ -198,9 +283,18 @@
             "latOnInstalls": 0,
             "latOffInstalls": 0,
             "ttr": 0.0,
-            "avgCPA": { "amount": "0", "currency": "EUR" },
-            "avgCPT": { "amount": "0", "currency": "EUR" },
-            "localSpend": { "amount": "0", "currency": "EUR" },
+            "avgCPA": {
+              "amount": "0",
+              "currency": "EUR"
+            },
+            "avgCPT": {
+              "amount": "0",
+              "currency": "EUR"
+            },
+            "localSpend": {
+              "amount": "0",
+              "currency": "EUR"
+            },
             "conversionRate": 0.0
           },
           "metadata": {
@@ -214,10 +308,18 @@
             },
             "servingStatus": "RUNNING",
             "servingStateReasons": null,
-            "countriesOrRegions": ["GB"],
+            "countriesOrRegions": [
+              "GB"
+            ],
             "modificationTime": "2019-03-16T17:19:20.344",
-            "totalBudget": { "amount": "5000", "currency": "EUR" },
-            "dailyBudget": { "amount": "200", "currency": "EUR" },
+            "totalBudget": {
+              "amount": "5000",
+              "currency": "EUR"
+            },
+            "dailyBudget": {
+              "amount": "200",
+              "currency": "EUR"
+            },
             "displayStatus": "RUNNING",
             "orgId": 378940,
             "countryOrRegionServingStateReasons": {},
@@ -235,9 +337,18 @@
             "latOnInstalls": 0,
             "latOffInstalls": 0,
             "ttr": 0.0,
-            "avgCPA": { "amount": "0", "currency": "EUR" },
-            "avgCPT": { "amount": "0", "currency": "EUR" },
-            "localSpend": { "amount": "0", "currency": "EUR" },
+            "avgCPA": {
+              "amount": "0",
+              "currency": "EUR"
+            },
+            "avgCPT": {
+              "amount": "0",
+              "currency": "EUR"
+            },
+            "localSpend": {
+              "amount": "0",
+              "currency": "EUR"
+            },
             "conversionRate": 0.0
           },
           "metadata": {
@@ -251,10 +362,18 @@
             },
             "servingStatus": "NOT_RUNNING",
             "servingStateReasons": "PAUSED_BY_USER",
-            "countriesOrRegions": ["US"],
+            "countriesOrRegions": [
+              "US"
+            ],
             "modificationTime": "2019-03-20T23:47:10.694",
-            "totalBudget": { "amount": "5000", "currency": "EUR" },
-            "dailyBudget": { "amount": "100", "currency": "EUR" },
+            "totalBudget": {
+              "amount": "5000",
+              "currency": "EUR"
+            },
+            "dailyBudget": {
+              "amount": "100",
+              "currency": "EUR"
+            },
             "displayStatus": "PAUSED",
             "orgId": 378940,
             "countryOrRegionServingStateReasons": {},
@@ -272,9 +391,18 @@
             "latOnInstalls": 0,
             "latOffInstalls": 0,
             "ttr": 0.0,
-            "avgCPA": { "amount": "0", "currency": "EUR" },
-            "avgCPT": { "amount": "0", "currency": "EUR" },
-            "localSpend": { "amount": "0", "currency": "EUR" },
+            "avgCPA": {
+              "amount": "0",
+              "currency": "EUR"
+            },
+            "avgCPT": {
+              "amount": "0",
+              "currency": "EUR"
+            },
+            "localSpend": {
+              "amount": "0",
+              "currency": "EUR"
+            },
             "conversionRate": 0.0
           },
           "metadata": {
@@ -288,10 +416,18 @@
             },
             "servingStatus": "NOT_RUNNING",
             "servingStateReasons": "PAUSED_BY_USER",
-            "countriesOrRegions": ["US"],
+            "countriesOrRegions": [
+              "US"
+            ],
             "modificationTime": "2019-03-20T23:52:56.609",
-            "totalBudget": { "amount": "5000", "currency": "EUR" },
-            "dailyBudget": { "amount": "200", "currency": "EUR" },
+            "totalBudget": {
+              "amount": "5000",
+              "currency": "EUR"
+            },
+            "dailyBudget": {
+              "amount": "200",
+              "currency": "EUR"
+            },
             "displayStatus": "PAUSED",
             "orgId": 378940,
             "countryOrRegionServingStateReasons": {},
@@ -309,9 +445,18 @@
             "latOnInstalls": 0,
             "latOffInstalls": 0,
             "ttr": 0.0,
-            "avgCPA": { "amount": "0", "currency": "EUR" },
-            "avgCPT": { "amount": "0", "currency": "EUR" },
-            "localSpend": { "amount": "0", "currency": "EUR" },
+            "avgCPA": {
+              "amount": "0",
+              "currency": "EUR"
+            },
+            "avgCPT": {
+              "amount": "0",
+              "currency": "EUR"
+            },
+            "localSpend": {
+              "amount": "0",
+              "currency": "EUR"
+            },
             "conversionRate": 0.0
           },
           "metadata": {
@@ -325,10 +470,18 @@
             },
             "servingStatus": "NOT_RUNNING",
             "servingStateReasons": "PAUSED_BY_USER",
-            "countriesOrRegions": ["US"],
+            "countriesOrRegions": [
+              "US"
+            ],
             "modificationTime": "2019-03-20T23:46:57.277",
-            "totalBudget": { "amount": "5000", "currency": "EUR" },
-            "dailyBudget": { "amount": "200", "currency": "EUR" },
+            "totalBudget": {
+              "amount": "5000",
+              "currency": "EUR"
+            },
+            "dailyBudget": {
+              "amount": "200",
+              "currency": "EUR"
+            },
             "displayStatus": "PAUSED",
             "orgId": 378940,
             "countryOrRegionServingStateReasons": {},
@@ -346,9 +499,18 @@
             "latOnInstalls": 0,
             "latOffInstalls": 0,
             "ttr": 0.0,
-            "avgCPA": { "amount": "0", "currency": "EUR" },
-            "avgCPT": { "amount": "0", "currency": "EUR" },
-            "localSpend": { "amount": "0", "currency": "EUR" },
+            "avgCPA": {
+              "amount": "0",
+              "currency": "EUR"
+            },
+            "avgCPT": {
+              "amount": "0",
+              "currency": "EUR"
+            },
+            "localSpend": {
+              "amount": "0",
+              "currency": "EUR"
+            },
             "conversionRate": 0.0
           },
           "metadata": {
@@ -362,10 +524,18 @@
             },
             "servingStatus": "NOT_RUNNING",
             "servingStateReasons": "PAUSED_BY_USER",
-            "countriesOrRegions": ["US"],
+            "countriesOrRegions": [
+              "US"
+            ],
             "modificationTime": "2019-03-20T23:46:48.228",
-            "totalBudget": { "amount": "5000", "currency": "EUR" },
-            "dailyBudget": { "amount": "200", "currency": "EUR" },
+            "totalBudget": {
+              "amount": "5000",
+              "currency": "EUR"
+            },
+            "dailyBudget": {
+              "amount": "200",
+              "currency": "EUR"
+            },
             "displayStatus": "PAUSED",
             "orgId": 378940,
             "countryOrRegionServingStateReasons": {},
@@ -384,14 +554,27 @@
           "latOnInstalls": 0,
           "latOffInstalls": 4,
           "ttr": 0.034,
-          "avgCPA": { "amount": "1.8926", "currency": "EUR" },
-          "avgCPT": { "amount": "0.8412", "currency": "EUR" },
-          "localSpend": { "amount": "7.5704", "currency": "EUR" },
+          "avgCPA": {
+            "amount": "1.8926",
+            "currency": "EUR"
+          },
+          "avgCPT": {
+            "amount": "0.8412",
+            "currency": "EUR"
+          },
+          "localSpend": {
+            "amount": "7.5704",
+            "currency": "EUR"
+          },
           "conversionRate": 0.4444
         }
       }
     }
   },
-  "pagination": { "totalResults": 10, "startIndex": 0, "itemsPerPage": 10 },
+  "pagination": {
+    "totalResults": 10,
+    "startIndex": 0,
+    "itemsPerPage": 10
+  },
   "error": null
 }

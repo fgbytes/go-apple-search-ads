@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"net/url"
 	"reflect"
@@ -173,7 +174,10 @@ func (c *Client) Do(ctx context.Context, req *http.Request, v interface{}) (*Res
 		Pagination Pagination
 	}
 	rv := &Response{Data: v}
+
 	err = json.NewDecoder(resp.Body).Decode(rv)
+	log.Println(rv)
+
 	response.Pagination = rv.Pagination
 	return response, err
 }

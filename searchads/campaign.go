@@ -20,7 +20,7 @@ type Campaign struct {
 	BudgetOrders                       []int              `json:"budgetOrders,omitempty"`
 	Status                             Status             `json:"status,omitempty"`
 	ServingStatus                      ServingStatus      `json:"servingStatus,omitempty"`
-	ServingStateReasons                interface{}        `json:"servingStateReasons,omitempty"`
+	ServingStateReasons                []string           `json:"servingStateReasons,omitempty"`
 	ModificationTime                   string             `json:"modificationTime,omitempty"`
 	StartTime                          string             `json:"startTime,omitempty"`
 	EndTime                            string             `json:"endTime,omitempty"`
