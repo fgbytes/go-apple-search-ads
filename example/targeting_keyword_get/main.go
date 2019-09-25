@@ -14,8 +14,8 @@ func main() {
 	campaignID := int64(262922238)
 	adGroupID := int64(262982513)
 	targetingKeywordID := int64(306708156)
-	pemdat, _ := ioutil.ReadFile("../cert.pem")
-	keydat, _ := ioutil.ReadFile("../cert.key")
+		pemdat, _ := ioutil.ReadFile("crt/cert.pem")
+	keydat, _ := ioutil.ReadFile("crt/cert.key")
 	client, err := searchads.NewClient(nil, pemdat, keydat, nil)
 	if err != nil {
 		log.Fatalf("Client error: %s", err)
