@@ -13,8 +13,8 @@ import (
 func main() {
 	campaignID := int64(242933727)
 	adGroupID := int64(242930998)
-	pemdat, _ := ioutil.ReadFile("../cert.pem")
-	keydat, _ := ioutil.ReadFile("../cert.key")
+		pemdat, _ := ioutil.ReadFile("crt/cert.pem")
+	keydat, _ := ioutil.ReadFile("crt/cert.key")
 	client, err := searchads.NewClient(nil, pemdat, keydat, nil)
 	if err != nil {
 		log.Fatalf("Client error: %s", err)
