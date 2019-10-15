@@ -10,22 +10,25 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"strconv"
 	"time"
 
 	"github.com/fgbytes/go-apple-search-ads/searchads"
 )
 
 func skag() {
-
+	//use your specific orgID
+	orgID := int64(1111111)
 	csvFile, err := os.Open(fmt.Sprintf("%s", "keywords.csv"))
 	if err != nil {
 		log.Fatal(err)
 	}
 	reader := csv.NewReader(bufio.NewReader(csvFile))
 
-	orgID := int64(1111111)
-	campaignID := int64(1111111)
-	//
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	pemdat, _ := ioutil.ReadFile("crt/cert.pem")
 	keydat, _ := ioutil.ReadFile("crt/cert.key")
 	client, err := searchads.NewClient(nil, pemdat, keydat, &orgID)
@@ -41,6 +44,7 @@ func skag() {
 		} else if error != nil {
 			log.Fatal("failed to read line with email ", error)
 		}
+		campaignID, err := strconv.ParseInt(line[2], 10, 64)
 		now := time.Now().UTC()
 		startTime := fmt.Sprintf("%4d-%02d-%02dT%02d:%02d:%02d.000",
 			now.Year(), now.Month(), now.Day(),
