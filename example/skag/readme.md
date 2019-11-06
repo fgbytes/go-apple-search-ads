@@ -20,7 +20,7 @@ cd ~/Downloads/skag
 ```
 and then
 ```
-go build && ./gog
+go build && ./skag
 ```
 
 <!-- go get -u github.com/fgbytes/go-apple-search-ads/ -->
