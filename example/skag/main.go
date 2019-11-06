@@ -16,7 +16,7 @@ import (
 	"github.com/fgbytes/go-apple-search-ads/searchads"
 )
 
-func skag() {
+func main() {
 	//use your specific orgID
 	orgID := int64(1111111)
 	csvFile, err := os.Open(fmt.Sprintf("%s", "keywords.csv"))
