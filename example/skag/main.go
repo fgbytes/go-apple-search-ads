@@ -11,24 +11,23 @@ import (
 	"log"
 	"os"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/fgbytes/go-apple-search-ads/searchads"
 )
 
 func main() {
-	//use your specific orgID
-	orgID := int64(1111111)
+
 	csvFile, err := os.Open(fmt.Sprintf("%s", "keywords.csv"))
 	if err != nil {
 		log.Fatal(err)
 	}
 	reader := csv.NewReader(bufio.NewReader(csvFile))
 
-	if err != nil {
-		log.Fatal(err)
-	}
+	orgID := int64(11111111)
 
+	//
 	pemdat, _ := ioutil.ReadFile("crt/cert.pem")
 	keydat, _ := ioutil.ReadFile("crt/cert.key")
 	client, err := searchads.NewClient(nil, pemdat, keydat, &orgID)
@@ -45,6 +44,9 @@ func main() {
 			log.Fatal("failed to read line with email ", error)
 		}
 		campaignID, err := strconv.ParseInt(line[2], 10, 64)
+		if err != nil {
+			log.Fatal(err)
+		}
 		now := time.Now().UTC()
 		startTime := fmt.Sprintf("%4d-%02d-%02dT%02d:%02d:%02d.000",
 			now.Year(), now.Month(), now.Day(),
@@ -65,6 +67,10 @@ func main() {
 		}
 
 		createdAdGroup, _, err := client.AdGroup.Create(context.Background(), campaignID, &data)
+		if err != nil && strings.Contains(err.Error(), "MessageCode:DUPLICATE_ADGROUP_NAME") {
+			log.Printf("adgroup already exists - skipping %s", err)
+			continue
+		}
 		if err != nil {
 			log.Fatalf("adgroup Create error: %s", err)
 			panic(err)
@@ -88,7 +94,7 @@ func main() {
 				MatchType: matchType,
 			},
 		}
-		createdKeyword, rs, err := client.AdGroupTargetingKeyword.CreateBulk(context.Background(), campaignID, createdAdGroup.ID, input)
+		createdKeyword, _, err := client.AdGroupTargetingKeyword.CreateBulk(context.Background(), campaignID, createdAdGroup.ID, input)
 		if err != nil {
 			log.Fatalf("TargetingKeyword error: %s", err)
 			panic(err)
@@ -96,8 +102,6 @@ func main() {
 		res, _ = json.Marshal(&createdKeyword)
 		fmt.Println(string(res))
 		fmt.Println("----------------")
-		fmt.Println(rs.Pagination.ItemsPerPage)
-		fmt.Println(rs.Pagination.StartIndex)
-		fmt.Println(rs.Pagination.TotalResults)
+
 	}
 }
